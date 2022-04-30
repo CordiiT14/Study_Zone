@@ -7,6 +7,7 @@ const Pomodoro = () => {
     const [workTime, setWorkTime] = useState(150);
     const [breakTime, setBreakTime] = useState(5);
     const [isClockRunning, setIsClockRunning] = useState(false);
+    const [intervalID, setIntervalID ] = useState(null)
 
     // useEffect(() => {
     //     runTimer()
@@ -14,17 +15,17 @@ const Pomodoro = () => {
 
     let timeLeftInSession = workTime;
   
-    // var countdown;
+    // let countdown;
     
 
     function timer(action) {
-        let countdown;
         if (action === "start"){
-            countdown = setInterval(stepDown, 1000);
+            let tempID = setInterval(stepDown, 1000);
+            setIntervalID(tempID)
         } else if (action === "pause"){
-            clearInterval(countdown)
+            clearInterval(intervalID)
         } else {
-            clearInterval(countdown)
+            clearInterval(intervalID)
         }
     }
 
