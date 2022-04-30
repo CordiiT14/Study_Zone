@@ -9,12 +9,11 @@ const Controls = ({isClockRunning, timer}) => {
             timer(event.target.value);
         }else {
             timer(event.target.value);
-            
         }
-        console.log(event.target.value)
-    }
+    };
 
     
+
     return(
         <div>
             {!isClockRunning ? <button value="start" onClick={handleClick}>

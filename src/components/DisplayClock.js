@@ -1,14 +1,13 @@
 import React, {useEffect} from 'react';
 
-const DisplayClock = ({workTime}) => {
-
+const DisplayClock = ({timeLeftInSession}) => {
 
 
     const displayTimer = () => {
 
-        let seconds = workTime % 60;
-        let minutes = parseInt(workTime / 60 ) % 60;
-        let hours = parseInt(workTime / 3600);
+        let seconds = timeLeftInSession % 60;
+        let minutes = parseInt(timeLeftInSession / 60 ) % 60;
+        let hours = parseInt(timeLeftInSession / 3600);
 
         return (`${addLeadingZeroes(hours)}:${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`)
     }
