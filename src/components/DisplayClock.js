@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 
 const DisplayClock = ({timeLeftInSession}) => {
 
+// display current session timer
 
     const displayTimer = () => {
 

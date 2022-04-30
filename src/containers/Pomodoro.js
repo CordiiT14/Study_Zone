@@ -53,6 +53,7 @@ const Pomodoro = () => {
         }
     };
 
+// session toggles however setTime not updating setTimeLeftInSession until next click
 
     const sessionToggle = (event) => {
         setSession(event.target.textContent);
