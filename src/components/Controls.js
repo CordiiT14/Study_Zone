@@ -1,16 +1,29 @@
 import React from 'react';
 
-const Controls = ({isClockRunning, startTimer, pauseTimer, resetTimer}) => {
+// const Controls = ({isClockRunning, startTimer, pauseTimer, resetTimer}) => {
+const Controls = ({isClockRunning, timer}) => {
 
     const handleClick = (event) => {
         if (event.target.value === 'start'){
-            startTimer();
+            timer(event.target.value);
         } else if (event.target.value === 'pause'){
-            pauseTimer();
+            timer(event.target.value);
         }else {
-            resetTimer();
+            timer(event.target.value);
+            
         }
+        console.log(event.target.value)
     }
+
+    // const handleClick = (event) => {
+    //     if (event.target.value === 'start'){
+    //         startTimer();
+    //     } else if (event.target.value === 'pause'){
+    //         pauseTimer();
+    //     }else {
+    //         resetTimer();
+    //     }
+    // }
     
     return(
         <div>
