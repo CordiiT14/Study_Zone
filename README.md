@@ -6,3 +6,4 @@ A webpage for study/focused work sessions.
 - Task list / to do list for session (will not persist)
 - Spotify music player with chill lofi beats playlist
 
+[Built with Create-React-App]
