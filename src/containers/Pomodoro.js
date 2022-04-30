@@ -4,7 +4,7 @@ import Controls from '../components/Controls';
 
 const Pomodoro = () => {
 
-    const [workTime, setWorkTime] = useState(1500);
+    const [workTime, setWorkTime] = useState(150);
     const [breakTime, setBreakTime] = useState(5);
     const [isClockRunning, setIsClockRunning] = useState(false);
 
@@ -18,11 +18,11 @@ const Pomodoro = () => {
 
     const runTimer = () => {
 
-            countdown = setInterval(() => {
-                stepDown()
-                console.log(timeLeftInSession);
-            }, 1000)
-            
+        countdown = setInterval(() => {
+            stepDown()
+            console.log(timeLeftInSession);
+
+        }, 1000)
 
     }
 
@@ -30,11 +30,10 @@ const Pomodoro = () => {
 
         if(timeLeftInSession > 0 ) {
             timeLeftInSession--
-            setWorkTime(timeLeftInSession)
+            setWorkTime(timeLeftInSession);
         } else {
-            clearInterval(countdown)
+            setIsClockRunning(false);
         }
-        return timeLeftInSession;
     }
 
 
@@ -54,27 +53,27 @@ const Pomodoro = () => {
     //     setWorkTime(temp)
     // }
 
-    // const startTimer = () => {
-    //     runTimer();
-    //     setIsClockRunning(true);
-    // }
+    const startTimer = () => {
+        setIsClockRunning(true);
+        runTimer();  
+    }
 
-    // const pauseTimer = () => {
-    //     clearInterval(runTimer);
-    //     setIsClockRunning(false);
-    // }
+    const pauseTimer = () => {
+        // clearInterval(runTimer);
+        // setIsClockRunning(false);
+    }
 
-    // const resetTimer = () => {
-    //     clearInterval(countdown)
-    //     setWorkTime(1500);
-    //     setIsClockRunning(false);
-    // }
+    const resetTimer = () => {
+        clearInterval(countdown);
+        // setWorkTime(1500);
+        setIsClockRunning(false);
+    }
 
 
     return(
         <div>
             <DisplayClock workTime={workTime} />
-            {/* <Controls isClockRunning={isClockRunning} startTimer={startTimer} pauseTimer={pauseTimer} resetTimer={resetTimer}/> */}
+            <Controls isClockRunning={isClockRunning} startTimer={startTimer} pauseTimer={pauseTimer} resetTimer={resetTimer}/>
         </div>
     )
 };

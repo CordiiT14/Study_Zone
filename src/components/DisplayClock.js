@@ -5,9 +5,6 @@ const DisplayClock = ({workTime}) => {
 
 
     const displayTimer = () => {
-        // let seconds = (workTime % 3600) % 60;
-        // let minutes = parseInt(workTime / 3600) % 60;
-        // let hours = parseInt(workTime / 3600);
 
         let seconds = workTime % 60;
         let minutes = parseInt(workTime / 60 ) % 60;
