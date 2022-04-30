@@ -1,6 +1,5 @@
 import React from 'react';
 
-// const Controls = ({isClockRunning, startTimer, pauseTimer, resetTimer}) => {
 const Controls = ({isClockRunning, timer}) => {
 
     const handleClick = (event) => {
@@ -15,15 +14,6 @@ const Controls = ({isClockRunning, timer}) => {
         console.log(event.target.value)
     }
 
-    // const handleClick = (event) => {
-    //     if (event.target.value === 'start'){
-    //         startTimer();
-    //     } else if (event.target.value === 'pause'){
-    //         pauseTimer();
-    //     }else {
-    //         resetTimer();
-    //     }
-    // }
     
     return(
         <div>

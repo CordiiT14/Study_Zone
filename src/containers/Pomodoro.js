@@ -14,8 +14,6 @@ const Pomodoro = () => {
     // },[])
 
     let timeLeftInSession = workTime;
-  
-    // let countdown;
     
 
     function timer(action) {
@@ -42,28 +40,10 @@ const Pomodoro = () => {
 
 
 
-    // const startTimer = () => {
-    //     setIsClockRunning(true);
-    //     runTimer();  
-    // }
-
-    // const pauseTimer = () => {
-
-    //     setIsClockRunning(false);
-    // }
-
-    // const resetTimer = () => {
-
-    //     setWorkTime(1500);
-    //     setIsClockRunning(false);
-
-    // }
-
 
     return(
         <div>
             <DisplayClock workTime={workTime} />
-            {/* <Controls isClockRunning={isClockRunning} startTimer={startTimer} pauseTimer={pauseTimer} resetTimer={resetTimer}/> */}
             <Controls isClockRunning={isClockRunning} timer={timer}/>
         </div>
     )
