@@ -29,7 +29,7 @@ const Pomodoro = () => {
     function timer(action) {
         if (action === "start"){
             setIsClockRunning(true);
-            let tempID = setInterval(stepDown, 1000);
+            let tempID = setInterval(stepDown , 1000);
             setIntervalID(tempID)
         } else if (action === "pause"){
             clearInterval(intervalID);
@@ -37,14 +37,14 @@ const Pomodoro = () => {
         } else {
             setIsClockRunning(false);
             clearInterval(intervalID);
-            setWorkTime(1500);
-            setTimeLeftInSession(null);
+            setTime();
         }
     };
 
+    let time = timeLeftInSession;
 
     function stepDown() {
-        let time = timeLeftInSession;
+        
         if(time > 0 ) {
             time--
             setTimeLeftInSession(time);
