@@ -21,13 +21,13 @@ const Sessions = ({sessionToggle, session,   workTime, setWorkTime, breakTime, s
 
     return(
         <div id='session-toggle'>
-                <div className="work" onClick={sessionToggle}>
+                <div className="work" >
                     <label>Work</label>
-                    <input type="number" onChange={setNewWorkTime} defaultValue={workTimeInMinutes} min={0} max={60}></input>
+                    <input type="number" onClick={sessionToggle} onChange={setNewWorkTime} defaultValue={workTimeInMinutes} min={0} max={60} aria-label="work"></input>
                 </div>
-                <div className="break" onClick={sessionToggle}>
+                <div className="break" >
                     <label>Break</label>
-                    <input type="number" onChange={setNewBreakTime} defaultValue={breakTimeInMinutes} min={0} max={60}></input>
+                    <input type="number" onClick={sessionToggle} onChange={setNewBreakTime} defaultValue={breakTimeInMinutes} min={0} max={60} aria-label="break"></input>
                 </div>
             </div>
     )

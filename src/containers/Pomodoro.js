@@ -10,18 +10,19 @@ const Pomodoro = () => {
     const [workTime, setWorkTime] = useState(1500);
     const [breakTime, setBreakTime] = useState(300);
     const [timeLeftInSession, setTimeLeftInSession] = useState()
-    const [session, setSession] = useState('Work');
+    const [session, setSession] = useState('work');
     const [isClockRunning, setIsClockRunning] = useState(false);
     const [intervalID, setIntervalID ] = useState(null)
 
+    //updating timer display on change of session or session times
     useEffect(() => {
         setTime()
-    },[session])
+    },[session, workTime, breakTime])
 
     const setTime = () => {
-        if(session === 'Work'){
+        if(session === 'work'){
             setTimeLeftInSession(workTime)
-        } else if (session === 'Break'){
+        } else if (session === 'break'){
             setTimeLeftInSession(breakTime)
         }
     };
@@ -54,9 +55,9 @@ const Pomodoro = () => {
         }
     };
 
-
+//switches timer from work session and break session
     const sessionToggle = (event) => {
-        setSession(event.target.textContent);
+        setSession(event.target.ariaLabel);
     }
 
     return(
