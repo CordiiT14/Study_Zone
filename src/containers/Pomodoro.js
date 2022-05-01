@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import DisplayClock from '../components/DisplayClock';
 import Controls from '../components/Controls';
-import bootstrap from 'bootstrap';
+import './pomodoro-timer.css';
+
 
 const Pomodoro = () => {
 
@@ -60,7 +61,7 @@ const Pomodoro = () => {
     }
 
     return(
-        <div>
+        <div id="pomodoro-clock-container">
             <div id='session-toggle'>
                 <div onClick={sessionToggle}>Work</div>
                 <div onClick={sessionToggle}>Short Break</div>

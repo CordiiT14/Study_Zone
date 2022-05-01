@@ -5,7 +5,7 @@ import ToDo from './containers/ToDo';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Pomodoro />
       <ToDo />
     </div>

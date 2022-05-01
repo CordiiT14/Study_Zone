@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Controls = ({isClockRunning, timer}) => {
 
     const handleClick = (event) => {

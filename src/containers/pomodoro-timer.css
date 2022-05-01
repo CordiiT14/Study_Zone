@@ -1,0 +1,22 @@
+#pomodoro-clock-container {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: center;
+    align-self: center;
+    border: solid;
+    opacity: 0.9;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#session-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: 100px;
+}
