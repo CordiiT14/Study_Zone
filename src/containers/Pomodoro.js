@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import DisplayClock from '../components/DisplayClock';
 import Controls from '../components/Controls';
+import bootstrap from 'bootstrap';
 
 const Pomodoro = () => {
 
@@ -13,7 +14,7 @@ const Pomodoro = () => {
 
     useEffect(() => {
         setTime()
-    },[])
+    },[session])
 
     const setTime = () => {
         if(session === 'Work'){
@@ -53,11 +54,9 @@ const Pomodoro = () => {
         }
     };
 
-// session toggles however setTime not updating setTimeLeftInSession until next click
 
     const sessionToggle = (event) => {
         setSession(event.target.textContent);
-        setTime();
     }
 
     return(
