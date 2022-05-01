@@ -11,7 +11,8 @@ const DisplayClock = ({timeLeftInSession}) => {
         let minutes = parseInt(timeLeftInSession / 60 ) % 60;
         let hours = parseInt(timeLeftInSession / 3600);
 
-        return (`${addLeadingZeroes(hours)}:${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`)
+        // return (`${addLeadingZeroes(hours)}:${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`)
+        return (`${addLeadingZeroes(minutes)}:${addLeadingZeroes(seconds)}`)
     }
 
     function addLeadingZeroes(time) {

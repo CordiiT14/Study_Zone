@@ -16,7 +16,7 @@ const Controls = ({isClockRunning, timer}) => {
     
 
     return(
-        <div>
+        <div id="controls-container">
             {!isClockRunning ? <button value="start" onClick={handleClick}>
                 Start
             </button>

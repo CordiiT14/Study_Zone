@@ -17,6 +17,21 @@
     justify-content: space-evenly;
 }
 
+#controls-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    margin: 20px;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
 h1 {
     font-size: 100px;
+    margin: 10px;
 }
