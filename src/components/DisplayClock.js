@@ -20,7 +20,7 @@ const DisplayClock = ({timeLeftInSession}) => {
     }
 
     return(
-        <div>
+        <div className='clock'>
         <h1>{displayTimer()}</h1>
         </div>
     )
