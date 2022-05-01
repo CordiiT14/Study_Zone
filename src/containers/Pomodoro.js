@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import DisplayClock from '../components/DisplayClock';
 import Controls from '../components/Controls';
+import Sessions from '../components/Sessions';
 import './pomodoro-timer.css';
 
 
@@ -62,11 +63,7 @@ const Pomodoro = () => {
 
     return(
         <div id="pomodoro-clock-container">
-            <div id='session-toggle'>
-                <div onClick={sessionToggle}>Work</div>
-                <div onClick={sessionToggle}>Short Break</div>
-                <div onClick={sessionToggle}>Long Break</div>
-            </div>
+            <Sessions sessionToggle={sessionToggle}/>
             <DisplayClock timeLeftInSession={timeLeftInSession} />
             <Controls isClockRunning={isClockRunning} timer={timer}/>
         </div>
