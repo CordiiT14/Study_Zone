@@ -61,7 +61,7 @@ const Pomodoro = () => {
 
     return(
         <div id="pomodoro-clock-container">
-            <Sessions sessionToggle={sessionToggle} workTime={workTime} breakTime={breakTime}/>
+            <Sessions sessionToggle={sessionToggle} workTime={workTime} setWorkTime={setWorkTime} breakTime={breakTime} setBreakTime={setBreakTime}/>
             <DisplayClock timeLeftInSession={timeLeftInSession} />
             <Controls isClockRunning={isClockRunning} timer={timer}/>
         </div>
