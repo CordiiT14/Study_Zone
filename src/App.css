@@ -1,5 +1,5 @@
 .App {
-  color: rgb(255, 254, 254);
+  color: rgb(241, 234, 234);
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
