@@ -21,10 +21,8 @@ const Pomodoro = () => {
     const setTime = () => {
         if(session === 'Work'){
             setTimeLeftInSession(workTime)
-        } else if (session === 'Short Break'){
+        } else if (session === 'Break'){
             setTimeLeftInSession(breakTime)
-        } else {
-            setTimeLeftInSession(breakTime * 2)
         }
     };
 
@@ -63,7 +61,7 @@ const Pomodoro = () => {
 
     return(
         <div id="pomodoro-clock-container">
-            <Sessions sessionToggle={sessionToggle}/>
+            <Sessions sessionToggle={sessionToggle} workTime={workTime} breakTime={breakTime}/>
             <DisplayClock timeLeftInSession={timeLeftInSession} />
             <Controls isClockRunning={isClockRunning} timer={timer}/>
         </div>
