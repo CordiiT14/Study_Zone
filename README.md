@@ -10,6 +10,10 @@ A webpage for study/focused work sessions.
 
 ## To Run
 
-- npm install
-- npm start
+> npm install
+> npm start
+
+## Pomodoro Timer
+
+![screen-gif](./pomodoro.gif)
 
