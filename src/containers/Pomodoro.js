@@ -3,6 +3,8 @@ import DisplayClock from '../components/DisplayClock';
 import Controls from '../components/Controls';
 import Sessions from '../components/Sessions';
 import './pomodoro-timer.css';
+import useSound from 'use-sound';
+import ding from '../sound/ding-idea-40142.mp3';
 
 
 const Pomodoro = () => {
@@ -13,6 +15,10 @@ const Pomodoro = () => {
     const [session, setSession] = useState('work');
     const [isClockRunning, setIsClockRunning] = useState(false);
     const [intervalID, setIntervalID ] = useState(null)
+
+    //set up timer sound
+    const [play, {stop}] = useSound(ding);
+
 
     //updating timer display on change of session or session times
     useEffect(() => {
@@ -49,7 +55,10 @@ const Pomodoro = () => {
         if(time > 0 ) {
             time--
             setTimeLeftInSession(time);
-        } else {
+        } else if (time == 0){
+            playTimerOverSound();
+        }
+        else {
             setIsClockRunning(false);
             timer('pause');
         }
@@ -59,6 +68,16 @@ const Pomodoro = () => {
     const sessionToggle = (event) => {
         setSession(event.target.ariaLabel);
     }
+
+// play sound when timer runs out (Music from Pixabay)
+    const playTimerOverSound = () => {
+    
+        play();
+        setTimeout(()=> {
+            stop();
+        }, 3000)
+    };
+
 
     return(
         <>
